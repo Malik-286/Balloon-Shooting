@@ -1,56 +1,34 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-///Developed by Indie Studio
-///https://assetstore.unity.com/publishers/9268
-///www.indiestd.com
-///info@indiestd.com
 
-/// <summary>
-/// Arrow script.
-/// </summary>
 public class Arrow : MonoBehaviour
 {
-		/// <summary>
-		/// The left,right clamp point for the arrow.
-		/// </summary>
+
 		public Transform leftClampPoint, rightClampPoint;
 
-		/// <summary>
-		/// The arrow position.
-		/// </summary>
+
 		private Vector3 arrowPosition;
 
-		/// <summary>
-		/// Whether the arrow is launched.
-		/// </summary>
+
 		[HideInInspector]
 		public bool launched;
 
-		/// <summary>
-		/// The launch power for the arrow.
-		/// </summary>
+	
 		[HideInInspector]
 		public float power;
 
-		/// <summary>
-		/// The arrow head reference.
-		/// </summary>
+
 		public ArrowHead arrowHead;
 
-		/// <summary>
-		/// The power factor.
-		/// </summary>
-		private float powerFactor = 2000;
 
-		/// <summary>
-		/// The static instance for this class.
-		/// </summary>
+		private float powerFactor = 2200;
+
+	
 		public static Arrow instance;
 
 		void Awake ()
 		{ 
-				//Setting up the instance
 				if (instance == null) {
 						instance = this;
 				}
@@ -81,13 +59,10 @@ public class Arrow : MonoBehaviour
 				}
 		}
 
-		/// <summary>
-		/// Clamp the position of the arrow.
-		/// </summary>
+ 
 		private void ClampPosition ()
 		{
-				//Get the position of the arrow
-				arrowPosition = transform.position;
+ 				arrowPosition = transform.position;
 				//Clamp the x-position between min and max points
 				arrowPosition.x = Mathf.Clamp (arrowPosition.x, Mathf.Min (rightClampPoint.position.x, leftClampPoint.position.x), Mathf.Max (rightClampPoint.position.x, leftClampPoint.position.x));
 				//Clamp the y-position between min and max points

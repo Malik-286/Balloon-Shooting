@@ -257,7 +257,10 @@ public class BowController : MonoBehaviour
         arrowComponent.launched = true;
 
         currentArrow.GetComponent<Rigidbody2D>().AddForce(arrowForce, ForceMode2D.Force);
-        AudioClips.instance.PlayArrowSwooshSFX();
+        if(AudioClips.instance != null)
+        {
+            AudioClips.instance.PlayArrowSwooshSFX();
+        }
 
         currentArrow = null;
     }
