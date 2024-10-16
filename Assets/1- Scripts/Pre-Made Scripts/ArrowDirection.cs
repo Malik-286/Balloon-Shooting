@@ -41,7 +41,7 @@ public class ArrowDirection : MonoBehaviour
         Camera cam = Camera.main;
         if (cam == null)
         {
-            Debug.LogError("No camera found with the tag 'MainCamera'.");
+            Debug.Log("No camera found with the tag 'MainCamera'.");
             return;
         }
 
@@ -54,7 +54,7 @@ public class ArrowDirection : MonoBehaviour
         arrowRigidbody = GetComponent<Rigidbody2D>();
         if (arrowRigidbody == null)
         {
-            Debug.LogError("Rigidbody2D is not attached to the GameObject.");
+            Debug.Log("Rigidbody2D is not attached to the GameObject.");
         }
     }
      
@@ -66,13 +66,13 @@ public class ArrowDirection : MonoBehaviour
             arrowRigidbody = GetComponent<Rigidbody2D>();
             if (arrowRigidbody == null)
             {
-                Debug.LogError("Rigidbody2D is not attached to the GameObject.");
+                Debug.Log("Rigidbody2D is not attached to the GameObject.");
                 return; // Exit the method to prevent further errors
             }
         }
 
         // Get the velocity of the arrow
-        velocity = arrowRigidbody.velocity;
+        velocity = arrowRigidbody.velocity*5;
         if (velocity.magnitude != 0 && !arrowRigidbody.isKinematic)
         {
             // Calculate the angle of the arrow based on its velocity
@@ -106,7 +106,11 @@ public class ArrowDirection : MonoBehaviour
             }
             else
             {
-                Debug.LogError("BowController instance is not set.");
+                if (GamePlayUI.Instance)
+                {
+                    GamePlayUI.Instance.ActivateLosePanel();
+                }
+
             }
 
             // Destroy the current arrow
@@ -119,7 +123,7 @@ public class ArrowDirection : MonoBehaviour
             }
             else
             {
-                Debug.LogError("GameManager instance is not set.");
+                Debug.Log("GameManager instance is not set.");
             }
         }
     }

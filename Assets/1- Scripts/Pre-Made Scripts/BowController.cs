@@ -160,7 +160,7 @@ public class BowController : MonoBehaviour
 
             if (arrowForce.magnitude > requiredLaunchForce)
             {
-                path.Draw(transform.position, arrowForce * 0.0185f / currentArrowRB.mass);
+                path.Draw(transform.position, arrowForce * 0.0185f / currentArrowRB.mass);//Was 0.0185f
             }
             else
             {
@@ -240,7 +240,7 @@ public class BowController : MonoBehaviour
 
         if (arrowForce.magnitude < requiredLaunchForce)
         {
-            Debug.LogError("Launch force is insufficient!");
+            Debug.Log("Launch force is insufficient!");
             return;
         }
 

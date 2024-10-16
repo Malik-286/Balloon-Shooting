@@ -69,11 +69,11 @@ public class DataManager : MonoBehaviour
 
 						//Setting up the references
 						if (scoreText == null) {
-								scoreText = GameObject.Find ("ScoreText").GetComponent<Text> ();
+								//scoreText = GameObject.Find ("ScoreText").GetComponent<Text> ();
 						}
 
 						if (arrowsText == null) {
-								arrowsText = GameObject.Find ("ArrowsText").GetComponent<Text> ();
+								//arrowsText = GameObject.Find ("ArrowsText").GetComponent<Text> ();
 						}
 
 						//Reset the current score
@@ -110,13 +110,16 @@ public class DataManager : MonoBehaviour
 				arrowsText.text = "Arrows : " + numberOfArrows;
 		}
 
-		/// <summary>
-		/// Reset the number of arrows.
-		/// </summary>
-		public static void ResetNumberOfArrows ()
+	/// <summary>
+	/// Reset the number of arrows.
+	/// </summary>
+	public static void ResetNumberOfArrows()
+	{
+		if (MissionManager.Instance)
 		{
-				numberOfArrows = 5;
+			numberOfArrows = MissionManager.Instance.ArrowsCountPerLevel[PlayerPrefs.GetInt("CurrentLevel")];
 		}
+	}
 
 		/// <summary>
 		/// Reset the current score.
@@ -193,8 +196,15 @@ public class DataManager : MonoBehaviour
 				get { return numberOfArrows;}
 				set {
 						numberOfArrows = value;
-						//Apply number of arrows on arrow's UI text
-						ApplyNumberOfArrowsOnUI ();
+			if (MissionManager.Instance)
+			{
+				MissionManager.Instance.RemainingArrows = numberOfArrows;
+				MissionManager.Instance.UpdateArrowsCounter();
+
+
+            }
+            //Apply number of arrows on arrow's UI text
+            ApplyNumberOfArrowsOnUI	 ();
 				}
 		}
 }

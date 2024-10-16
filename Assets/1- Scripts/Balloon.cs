@@ -20,6 +20,11 @@ public class Balloon : MonoBehaviour
     {
          if (collider.gameObject.tag == "Arrow")
         {
+            if (MissionManager.Instance)
+            {
+                MissionManager.Instance.SmashedBallons = + 1;
+                MissionManager.Instance.UpdateBalloonsCounter();
+            }
             Destroy(collider.gameObject);  
             AudioManager.Instance.PlayBalloonPopupSoundWEffect();  
             Destroy(gameObject);  
