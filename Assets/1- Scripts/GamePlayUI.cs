@@ -1,16 +1,33 @@
-using System.Collections;
-using System.Collections.Generic;
+
+using hardartcore.CasualGUI;
 using UnityEngine;
-using TMPro;
 
 public class GamePlayUI : MonoBehaviour
 {
 
-    [SerializeField] TextMeshProUGUI balloonsCountText;
-    
+    [SerializeField] GameObject winPanel;
+    [SerializeField] GameObject losePanel;
 
-     void Update()
+
+
+    void Start()
+    {
+        winPanel.SetActive(false);
+        losePanel.SetActive(false);
+    }
+    void Update()
     {
 
+    }
+
+
+    public void ActivateWinPanel()
+    {
+        winPanel.GetComponent<Dialog>().ShowDialog();
+    }
+
+    public void ActivateLosePanel()
+    {
+        losePanel.GetComponent<Dialog>().ShowDialog();
     }
 }
