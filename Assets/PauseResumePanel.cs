@@ -1,6 +1,4 @@
 using hardartcore.CasualGUI;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class PauseResumePanel : MonoBehaviour

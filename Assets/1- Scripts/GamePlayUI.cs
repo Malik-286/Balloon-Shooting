@@ -56,6 +56,14 @@ public class GamePlayUI : MonoBehaviour
     public void PauseGame()
     {
         pauseGamePanel.gameObject.GetComponent<Dialog>().ShowDialog();
+        StartCoroutine(PauseTheGame());
+    }
+
+
+    IEnumerator PauseTheGame()
+    {
+        yield return new WaitForSeconds(0.4f);
+        Time.timeScale = 0.0f;
     }
 
   
