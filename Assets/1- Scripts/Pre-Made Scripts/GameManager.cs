@@ -20,7 +20,7 @@ public class GameManager : MonoBehaviour
 								Debug.Log (ex.Message);
 						}
 
-						StartCoroutine ("LoadMainMenuScene");
+						//StartCoroutine ("LoadMainMenuScene");
 				}
 		}
 

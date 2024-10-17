@@ -57,8 +57,13 @@ public class ArrowHead : MonoBehaviour
 
         if (col.gameObject.tag == "Balloon")
         {
+			if (MissionManager.Instance)
+			{
+				MissionManager.Instance.SmashedBallons += 1;
+				MissionManager.Instance.UpdateBalloonsCounter();
+			}
             Destroy(col.gameObject);
-            DataManager.CurrentScore += 20;//Add 20 points
+			//Add 20 points
             //plusScoreEffectSpriteRenderer.sprite = plusScore[1];
             if (AudioManager.Instance)
             {

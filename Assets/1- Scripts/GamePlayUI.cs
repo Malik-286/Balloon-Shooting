@@ -45,11 +45,17 @@ public class GamePlayUI : MonoBehaviour
         losePanel.GetComponent<Dialog>().ShowDialog();
     }
 
+    public void HomebuttonButton()
+    {
+        SceneManager.LoadScene("Main Menu");
+    }
 
+    public void RestartButton()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+    }
     public void NextButton()
     {
-        PlayerPrefs.SetInt("CurrentLevel", PlayerPrefs.GetInt("CurrentLevel") + 1);
-
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 

@@ -14,6 +14,14 @@ public class Balloon : MonoBehaviour
     void Update()
     {
         transform.Translate(Vector2.up * moveSpeed * Time.deltaTime);
+
+        if (MissionManager.Instance)
+        {
+            if (MissionManager.Instance.PanelsActivated)
+            {
+                Destroy(gameObject);
+            }
+        }
     }
 
     void OnTriggerEnter2D(Collider2D collider)

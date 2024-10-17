@@ -9,14 +9,22 @@ public class MissionManager : MonoBehaviour
 
     public static MissionManager Instance;
 
+    public bool PanelsActivated = false;
+    [SerializeField] bool Success,Fail = false;
+
+    [Header("Arrows")]
     public int[] ArrowsCountPerLevel;
     public int RemainingArrows;
     public TextMeshProUGUI ArrowsCounter;
     [SerializeField] int TotalArrows;
 
+    [Header("Balloons")]
+    public int[] BalloonsCountPerLevel;
     public int SmashedBallons;
     public TextMeshProUGUI BalloonsCounter;
-    [SerializeField] bool Success,Fail;
+
+    [Header("Others")]
+    public TextMeshProUGUI LevelCounter;
 
     private void Awake()
     {
@@ -24,32 +32,70 @@ public class MissionManager : MonoBehaviour
         {
             Instance = this;
         }
+
+        //Gameplay Essentials
+        LevelCounter.text = (PlayerPrefs.GetInt("CurrentLevel")+1).ToString();
+        TotalArrows = ArrowsCountPerLevel[PlayerPrefs.GetInt("CurrentLevel")];
     }
     // Start is called before the first frame update
     void Start()
     {
-        UpdateBalloonsCounter();
+        RemainingArrows = TotalArrows;
         UpdateArrowsCounter();
-
     }
 
     public void UpdateBalloonsCounter()
     {
-        if(BalloonsCounter != null)
+        BalloonsCounter.text = SmashedBallons.ToString();
+        if(SmashedBallons == BalloonsCountPerLevel[PlayerPrefs.GetInt("CurrentLevel")])
         {
-            BalloonsCounter.text = SmashedBallons.ToString();
+            Success = true;
+            Fail = false;
+
+            //Increase Level Number
+            PlayerPrefs.SetInt("CurrentLevel", PlayerPrefs.GetInt("CurrentLevel") + 1);
         }
     }
     public void UpdateArrowsCounter()
     {
-        if (BalloonsCounter != null)
+            ArrowsCounter.text = RemainingArrows.ToString(); 
+        if(RemainingArrows == 0)
         {
-            ArrowsCounter.text = RemainingArrows.ToString();
+            Fail = true;
+            Success = false;
         }
     }
     // Update is called once per frame
     void Update()
     {
-        
+        if (!PanelsActivated)
+        {
+            if (Success)
+            {
+                if (GamePlayUI.Instance)
+                {
+                    GamePlayUI.Instance.ActivateWinPanel();
+                }
+                PanelsActivated = true;
+            }
+            else if (Fail)
+            {
+                if (SmashedBallons != BalloonsCountPerLevel[PlayerPrefs.GetInt("CurrentLevel")])
+                    {
+                    if (GamePlayUI.Instance)
+                    {
+                        GamePlayUI.Instance.ActivateLosePanel();
+                    }
+                    else
+                    {
+                        if (GamePlayUI.Instance)
+                        {
+                            GamePlayUI.Instance.ActivateWinPanel();
+                        }
+                    }
+                    PanelsActivated = true;
+                }
+            }
+        }
     }
 }
