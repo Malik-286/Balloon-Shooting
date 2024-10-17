@@ -50,26 +50,35 @@ public class ArrowHead : MonoBehaviour
 				//plusArrowEffectAnimator = plusArrowEffectGameObject.GetComponent<Animator> ();
 				//plusScoreEffectSpriteRenderer = plusScoreEffectGameObject.GetComponent<SpriteRenderer> ();
 		}
-	
-		void OnCollisionEnter2D (Collision2D col)
-		{
-
-
-        if (col.gameObject.tag == "Balloon")
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.tag == "Balloon")
         {
 			if (MissionManager.Instance)
 			{
 				MissionManager.Instance.SmashedBallons += 1;
 				MissionManager.Instance.UpdateBalloonsCounter();
 			}
-            Destroy(col.gameObject);
-			//Add 20 points
-            //plusScoreEffectSpriteRenderer.sprite = plusScore[1];
+            collision.gameObject.GetComponent<Transform>().GetChild(0).gameObject.SetActive(true);
+            collision.gameObject.GetComponent<SpriteRenderer>().enabled = false;
             if (AudioManager.Instance)
             {
                 AudioManager.Instance.PlayBalloonPopupSoundWEffect();
             }
+            Destroy(collision.gameObject,5f);
         }
+        if (collision.gameObject.tag == "Grenade")
+        {
+			if (Balloon.Instance)
+			{
+				Balloon.Instance.GrenadeHit();
+			}
+        }
+
+    }
+    void OnCollisionEnter2D (Collision2D col)
+		{
+
         //On collision with the target collider
         if (col.transform.tag == "TargetCollider") {
 						//Get the first contacts point

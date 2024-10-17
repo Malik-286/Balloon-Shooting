@@ -14,8 +14,8 @@ GameObject:
   - component: {fileID: 1752637900988953438}
   - component: {fileID: 3178368902577648643}
   m_Layer: 0
-  m_Name: Balloons 2
-  m_TagString: Balloon
+  m_Name: Grenade
+  m_TagString: Grenade
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -29,11 +29,11 @@ Transform:
   m_GameObject: {fileID: 3791460533859589594}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1444.1099, y: 539.3277, z: 0}
-  m_LocalScale: {x: 0.9326109, y: 0.9234923, z: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 7724429362512538737}
+  - {fileID: 6089946287585306364}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &2702167699318357395
@@ -77,7 +77,7 @@ SpriteRenderer:
   m_SortingLayerID: -1805733663
   m_SortingLayer: 1
   m_SortingOrder: 2
-  m_Sprite: {fileID: 21300000, guid: 47ff779c418a396478b4594ea0287919, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 2d2d27533d38f4520a0bd772a1ac9169, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -120,9 +120,9 @@ CircleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.0030104914, y: 0.58831424}
+  m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 0.44536272
+  m_Radius: 0.7
 --- !u!114 &1752637900988953438
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -163,7 +163,7 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!1001 &3711406833228993692
+--- !u!1001 &878459953772322321
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -185,7 +185,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6391521898307156205, guid: ccd54b54c2b40cd47bf26e2b64757b18, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.574
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6391521898307156205, guid: ccd54b54c2b40cd47bf26e2b64757b18, type: 3}
       propertyPath: m_LocalPosition.z
@@ -219,17 +219,37 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 7815810114947589520, guid: ccd54b54c2b40cd47bf26e2b64757b18, type: 3}
-      propertyPath: m_SortingOrder
-      value: 100
+    - target: {fileID: 8466591103489887814, guid: ccd54b54c2b40cd47bf26e2b64757b18, type: 3}
+      propertyPath: InitialModule.startColor.maxColor.b
+      value: 0.89019614
+      objectReference: {fileID: 0}
+    - target: {fileID: 8466591103489887814, guid: ccd54b54c2b40cd47bf26e2b64757b18, type: 3}
+      propertyPath: InitialModule.startColor.maxColor.g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8466591103489887814, guid: ccd54b54c2b40cd47bf26e2b64757b18, type: 3}
+      propertyPath: InitialModule.startColor.maxColor.r
+      value: 0.83921576
+      objectReference: {fileID: 0}
+    - target: {fileID: 8466591103489887814, guid: ccd54b54c2b40cd47bf26e2b64757b18, type: 3}
+      propertyPath: InitialModule.startColor.minColor.b
+      value: 0.9490197
+      objectReference: {fileID: 0}
+    - target: {fileID: 8466591103489887814, guid: ccd54b54c2b40cd47bf26e2b64757b18, type: 3}
+      propertyPath: InitialModule.startColor.minColor.g
+      value: 0.3803922
+      objectReference: {fileID: 0}
+    - target: {fileID: 8466591103489887814, guid: ccd54b54c2b40cd47bf26e2b64757b18, type: 3}
+      propertyPath: InitialModule.startColor.minColor.r
+      value: 0.8862746
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ccd54b54c2b40cd47bf26e2b64757b18, type: 3}
---- !u!4 &7724429362512538737 stripped
+--- !u!4 &6089946287585306364 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6391521898307156205, guid: ccd54b54c2b40cd47bf26e2b64757b18, type: 3}
-  m_PrefabInstance: {fileID: 3711406833228993692}
+  m_PrefabInstance: {fileID: 878459953772322321}
   m_PrefabAsset: {fileID: 0}

@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Arrow
   - Balloon
+  - Grenade
   layers:
   - Default
   - TransparentFX
@@ -45,4 +46,7 @@ TagManager:
     locked: 0
   - name: Gameplay
     uniqueID: 2489233633
+    locked: 0
+  - name: UI
+    uniqueID: 45682203
     locked: 0
