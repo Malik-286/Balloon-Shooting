@@ -1,5 +1,6 @@
 
 using hardartcore.CasualGUI;
+using System.Collections;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -11,6 +12,7 @@ public class GamePlayUI : MonoBehaviour
     [SerializeField] GameObject winPanel;
     [SerializeField] GameObject losePanel;
 
+    [SerializeField] GameObject pauseGamePanel;
 
     private void Awake()
     {
@@ -21,8 +23,11 @@ public class GamePlayUI : MonoBehaviour
     }
     void Start()
     {
+        Time.timeScale = 1.0f;
+
         winPanel.SetActive(false);
         losePanel.SetActive(false);
+        pauseGamePanel.SetActive(false);
     }
     void Update()
     {
@@ -47,4 +52,11 @@ public class GamePlayUI : MonoBehaviour
 
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
+
+    public void PauseGame()
+    {
+        pauseGamePanel.gameObject.GetComponent<Dialog>().ShowDialog();
+    }
+
+  
 }
