@@ -69,9 +69,9 @@ public class ArrowHead : MonoBehaviour
         }
         if (collision.gameObject.tag == "Grenade")
         {
-			if (Balloon.Instance)
+			if (Grenade.Instance)
 			{
-				Balloon.Instance.GrenadeHit();
+                Grenade.Instance.GrenadeHit();
 			}
         }
 

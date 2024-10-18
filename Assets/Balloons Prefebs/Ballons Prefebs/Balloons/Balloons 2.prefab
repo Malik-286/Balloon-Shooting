@@ -135,6 +135,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5514ebcd2cc1d874c9b78a35b56989d4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Particle: {fileID: 0}
   moveSpeed: 3
 --- !u!50 &3178368902577648643
 Rigidbody2D:
@@ -180,6 +181,18 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6391521898307156205, guid: ccd54b54c2b40cd47bf26e2b64757b18, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.03
+      objectReference: {fileID: 0}
+    - target: {fileID: 6391521898307156205, guid: ccd54b54c2b40cd47bf26e2b64757b18, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.03
+      objectReference: {fileID: 0}
+    - target: {fileID: 6391521898307156205, guid: ccd54b54c2b40cd47bf26e2b64757b18, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.03
+      objectReference: {fileID: 0}
+    - target: {fileID: 6391521898307156205, guid: ccd54b54c2b40cd47bf26e2b64757b18, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
       objectReference: {fileID: 0}
@@ -222,6 +235,14 @@ PrefabInstance:
     - target: {fileID: 7815810114947589520, guid: ccd54b54c2b40cd47bf26e2b64757b18, type: 3}
       propertyPath: m_SortingOrder
       value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 8466591103489887814, guid: ccd54b54c2b40cd47bf26e2b64757b18, type: 3}
+      propertyPath: looping
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8466591103489887814, guid: ccd54b54c2b40cd47bf26e2b64757b18, type: 3}
+      propertyPath: lengthInSec
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

@@ -6277,7 +6277,7 @@ Canvas:
   m_VertexColorAlwaysGammaSpace: 0
   m_AdditionalShaderChannelsFlag: 25
   m_UpdateRectTransformForStandalone: 0
-  m_SortingLayerID: 45682203
+  m_SortingLayerID: 0
   m_SortingOrder: 0
   m_TargetDisplay: 0
 --- !u!114 &1779214399
@@ -6931,7 +6931,7 @@ GameObject:
   - component: {fileID: 2076815869}
   - component: {fileID: 2076815868}
   m_Layer: 0
-  m_Name: Greandae Pool
+  m_Name: Greande Pool
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6949,16 +6949,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ea131d87317acf4bb5b3263c3ec3ede, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  totalBallons: 10
+  totalBallons: 3
   balloonsPrefabs:
   - {fileID: 3791460533859589594, guid: 8cca01fa4fcb41748a937b5194a095cf, type: 3}
+  - {fileID: 3791460533859589594, guid: a5ea4a4dda69d7442965f4f102cf2c36, type: 3}
+  - {fileID: 3791460533859589594, guid: c6ff8a0d5e380814bb9619fa801a4da4, type: 3}
   poolPositions:
   - {fileID: 821458365}
   - {fileID: 1145952273}
   - {fileID: 1916664262}
   - {fileID: 1593567700}
   - {fileID: 475861584}
-  waitTime: 10
+  waitTime: 15
 --- !u!212 &2076815869
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -7743,11 +7745,11 @@ Transform:
 SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
-  - {fileID: 1641629880}
   - {fileID: 1779214395}
   - {fileID: 1111606971}
   - {fileID: 8534103219149394616}
   - {fileID: 2076815870}
+  - {fileID: 1641629880}
   - {fileID: 8661297449309186940}
   - {fileID: 1454548042}
   - {fileID: 272126428}

@@ -161,7 +161,7 @@ PlayerSettings:
   androidSupportedAspectRatio: 1
   androidMaxAspectRatio: 2.1
   applicationIdentifier:
-    Android: com.DefaultCompany.BalloonShooting
+    Android: com.ags.balloonshooting
   buildNumber:
     Standalone: 0
     VisionOS: 0

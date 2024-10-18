@@ -11,10 +11,10 @@ GameObject:
   - component: {fileID: 4541092973844928104}
   - component: {fileID: 2702167699318357395}
   - component: {fileID: 2876668262950537160}
-  - component: {fileID: 1752637900988953438}
   - component: {fileID: 3178368902577648643}
+  - component: {fileID: -2458169332635040298}
   m_Layer: 0
-  m_Name: Grenade
+  m_Name: FullsizeGrenade
   m_TagString: Grenade
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -123,19 +123,6 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.7
---- !u!114 &1752637900988953438
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3791460533859589594}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5514ebcd2cc1d874c9b78a35b56989d4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  moveSpeed: 3
 --- !u!50 &3178368902577648643
 Rigidbody2D:
   serializedVersion: 4
@@ -163,6 +150,19 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &-2458169332635040298
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3791460533859589594}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0ce9d01d06ccd0c40888def2a7792df9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  moveSpeed: 4
 --- !u!1001 &878459953772322321
 PrefabInstance:
   m_ObjectHideFlags: 0
