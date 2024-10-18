@@ -72,7 +72,7 @@ public class ArrowDirection : MonoBehaviour
         }
 
         // Get the velocity of the arrow
-        velocity = arrowRigidbody.velocity*5;
+        velocity = arrowRigidbody.linearVelocity*5;
         if (velocity.magnitude != 0 && !arrowRigidbody.isKinematic)
         {
             // Calculate the angle of the arrow based on its velocity
