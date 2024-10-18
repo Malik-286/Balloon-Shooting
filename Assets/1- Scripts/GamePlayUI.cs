@@ -3,6 +3,8 @@ using hardartcore.CasualGUI;
 using System.Collections;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
+
 
 public class GamePlayUI : MonoBehaviour
 {
@@ -13,6 +15,11 @@ public class GamePlayUI : MonoBehaviour
     [SerializeField] GameObject losePanel;
 
     [SerializeField] GameObject pauseGamePanel;
+    [SerializeField] SpriteRenderer backGroundImage;
+
+    [SerializeField] Sprite[] backGroundSprites;
+
+
 
     private void Awake()
     {
@@ -23,7 +30,9 @@ public class GamePlayUI : MonoBehaviour
     }
     void Start()
     {
+
         Time.timeScale = 1.0f;
+        SelectRandomBackGroundSprite();
 
         winPanel.SetActive(false);
         losePanel.SetActive(false);
@@ -34,7 +43,7 @@ public class GamePlayUI : MonoBehaviour
 
     }
 
-    
+
     public void ActivateWinPanel()
     {
         winPanel.GetComponent<Dialog>().ShowDialog();
@@ -72,5 +81,15 @@ public class GamePlayUI : MonoBehaviour
         Time.timeScale = 0.0f;
     }
 
-  
+    public void SelectRandomBackGroundSprite()
+    {
+        // Check if there are any sprites
+        if (backGroundSprites.Length == 0) return;
+
+        // Pick a random sprite
+        int randomIndex = Random.Range(0, backGroundSprites.Length);
+        backGroundImage.sprite = backGroundSprites[randomIndex]; // Set the sprite
+    }
+
+
 }

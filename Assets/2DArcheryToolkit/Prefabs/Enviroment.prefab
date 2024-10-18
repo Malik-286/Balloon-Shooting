@@ -3625,7 +3625,7 @@ GameObject:
   - component: {fileID: 3129091069507778204}
   - component: {fileID: 1152912872663688575}
   m_Layer: 0
-  m_Name: New Bg
+  m_Name: Game Scene BackGrounds
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
