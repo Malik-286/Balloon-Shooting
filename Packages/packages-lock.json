@@ -47,7 +47,7 @@
     },
     "com.unity.2d.psdimporter": {
       "version": "9.0.3",
-      "depth": 0,
+      "depth": 1,
       "source": "registry",
       "dependencies": {
         "com.unity.2d.common": "9.0.4",
@@ -102,12 +102,12 @@
       },
       "url": "https://packages.unity.com"
     },
-    "com.unity.ai.navigation": {
-      "version": "2.0.4",
+    "com.unity.adaptiveperformance.google.android": {
+      "version": "1.3.1",
       "depth": 0,
       "source": "registry",
       "dependencies": {
-        "com.unity.modules.ai": "1.0.0"
+        "com.unity.adaptiveperformance": "5.1.0"
       },
       "url": "https://packages.unity.com"
     },
@@ -237,27 +237,6 @@
       "dependencies": {
         "com.unity.modules.uielements": "1.0.0"
       }
-    },
-    "com.unity.muse.common": {
-      "version": "2.0.3",
-      "depth": 1,
-      "source": "registry",
-      "dependencies": {
-        "com.unity.modules.uielements": "1.0.0",
-        "com.unity.modules.imageconversion": "1.0.0",
-        "com.unity.modules.unitywebrequesttexture": "1.0.0"
-      },
-      "url": "https://packages.unity.com"
-    },
-    "com.unity.muse.texture": {
-      "version": "1.1.1",
-      "depth": 0,
-      "source": "registry",
-      "dependencies": {
-        "com.unity.muse.common": "2.0.3",
-        "com.unity.shadergraph": "14.0.7"
-      },
-      "url": "https://packages.unity.com"
     },
     "com.unity.nuget.mono-cecil": {
       "version": "1.11.4",
