@@ -1,13 +1,20 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using TMPro;
+
+
 
 public class MainMenuUI : MonoBehaviour
 {
-     void Start()
+
+
+    [SerializeField] GameObject settingsPanel;
+    [SerializeField] TextMeshProUGUI versionText;
+
+    void Start()
     {
-        
+        settingsPanel.SetActive(false);
+        UpdateGameVersionText();
     }
 
     public void StartGame()
@@ -15,5 +22,27 @@ public class MainMenuUI : MonoBehaviour
         SceneManager.LoadScene(1);
     }
 
+
+    public void MuteAndUnMuteAudio()
+    {
+        if(AudioManager.Instance.audioSource != null)
+        {
+            if(AudioManager.Instance.audioSource.mute)
+            {
+                AudioManager.Instance.audioSource.mute = false;
+            }else if(!AudioManager.Instance.audioSource.mute)
+            {
+                AudioManager.Instance.audioSource.mute = true;
+
+            }
+        }
+
+    }
+
+
+    void UpdateGameVersionText()
+    {
+        versionText.text = "version : "+Application.version;
+    }
    
 }
