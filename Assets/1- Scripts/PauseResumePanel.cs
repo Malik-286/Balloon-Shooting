@@ -7,6 +7,12 @@ public class PauseResumePanel : MonoBehaviour
 
     public void ResumeGame()
     {
+
+        if (BowController.instance)
+        {
+            BowController.instance.gameObject.GetComponent<BowController>().enabled = true;
+        }
+
         Time.timeScale = 1.0f;
         gameObject.GetComponent<Dialog>().HideDialog();
 

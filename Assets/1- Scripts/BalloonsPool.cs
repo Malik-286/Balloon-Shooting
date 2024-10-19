@@ -6,6 +6,7 @@ public class BalloonsPool : MonoBehaviour
 {
     public static BalloonsPool instance;
 
+    public bool isGrenadePool;
     void Awake()
     {
         instance = this;
@@ -28,6 +29,10 @@ public class BalloonsPool : MonoBehaviour
 
     IEnumerator BalloonsPooling()
     {
+        if (isGrenadePool)
+        {
+            yield return new WaitForSeconds(waitTime);
+        }
         while (totalBallons >= 1) 
         {
             totalBallons--;

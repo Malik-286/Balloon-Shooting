@@ -56,7 +56,6 @@ public class AudioManager : Singleton<AudioManager>
     public void PlayLoseSoundEffect()
     {
         audioSource.PlayOneShot(loseSoundEffect, 1.3f);
- 
     }
 
     public void PlayGernadeSoundEffect()

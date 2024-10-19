@@ -50,6 +50,8 @@ public class Grenade : MonoBehaviour
                     if (rb.GetComponent<Balloon>())
                     {
                         rb.GetComponent<Balloon>().Particle.SetActive(true);
+			            rb.GetComponent<Balloon>().StopMoving = true;
+
                     }
 
                     if (AudioManager.Instance)
@@ -70,8 +72,13 @@ public class Grenade : MonoBehaviour
     }
     void Update()
     {
-        transform.Translate(Vector2.up * moveSpeed * Time.deltaTime);
-
+        if (Balloon.Instance)
+        {
+            if (!Balloon.Instance.StopMoving)
+            {
+                transform.Translate(Vector2.up * moveSpeed * Time.deltaTime);
+            }
+        }
         if (MissionManager.Instance)
         {
             if (MissionManager.Instance.PanelsActivated)

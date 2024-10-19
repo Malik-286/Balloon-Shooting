@@ -61,6 +61,7 @@ public class ArrowHead : MonoBehaviour
 			}
             collision.gameObject.GetComponent<Transform>().GetChild(0).gameObject.SetActive(true);
             collision.gameObject.GetComponent<SpriteRenderer>().enabled = false;
+			collision.gameObject.GetComponent<Balloon>().StopMoving = true;
             if (AudioManager.Instance)
             {
                 AudioManager.Instance.PlayBalloonPopupSoundWEffect();

@@ -46,12 +46,27 @@ public class GamePlayUI : MonoBehaviour
 
     public void ActivateWinPanel()
     {
+        if (BowController.instance)
+        {
+            BowController.instance.gameObject.GetComponent<BowController>().enabled = false;
+        }
+
         winPanel.GetComponent<Dialog>().ShowDialog();
     }
 
     public void ActivateLosePanel()
     {
+        if (BowController.instance)
+        {
+            BowController.instance.gameObject.GetComponent<BowController>().enabled = false;
+        }
+
         losePanel.GetComponent<Dialog>().ShowDialog();
+
+        if (AudioManager.Instance != null)
+        {
+            AudioManager.Instance.PlayLoseSoundEffect();
+        }
     }
 
     public void HomebuttonButton()
@@ -72,6 +87,10 @@ public class GamePlayUI : MonoBehaviour
     {
         pauseGamePanel.gameObject.GetComponent<Dialog>().ShowDialog();
         StartCoroutine(PauseTheGame());
+        if (BowController.instance)
+        {
+            BowController.instance.gameObject.GetComponent<BowController>().enabled = false;
+        }
     }
 
 
