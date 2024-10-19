@@ -24,10 +24,12 @@ public class GameManager : MonoBehaviour
 				}
 		}
 
-	private IEnumerator LoadMainMenuScene()
+	public IEnumerator LoadMainMenuScene()
 	{
-		yield return new WaitForSeconds(3);
+		yield return new WaitForSeconds(2.5f);
 		SceneManager.LoadScene(0);
 	}
+
+	 
 
 }

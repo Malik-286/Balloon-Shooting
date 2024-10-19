@@ -19,7 +19,8 @@ public class GamePlayUI : MonoBehaviour
 
     [SerializeField] Sprite[] backGroundSprites;
 
-
+    [Header("Scene Startup Image")]
+    [SerializeField] Image fadeImage;
 
     private void Awake()
     {
@@ -37,6 +38,10 @@ public class GamePlayUI : MonoBehaviour
         winPanel.SetActive(false);
         losePanel.SetActive(false);
         pauseGamePanel.SetActive(false);
+
+
+        fadeImage.gameObject.SetActive(true);
+        StartCoroutine(FadeImageToTransparentWhite(1.5f));
     }
     void Update()
     {
@@ -110,5 +115,22 @@ public class GamePlayUI : MonoBehaviour
         backGroundImage.sprite = backGroundSprites[randomIndex]; // Set the sprite
     }
 
+    IEnumerator FadeImageToTransparentWhite(float fadeDuration)
+    {
+        Color startColor = Color.black;
+        Color targetColor = new Color(0f, 0f, 0f, 0f); // Transparent white
 
+        float elapsedTime = 0f;
+
+        while (elapsedTime < fadeDuration)
+        {
+            fadeImage.color = Color.Lerp(startColor, targetColor, elapsedTime / fadeDuration);
+            elapsedTime += Time.deltaTime;
+            yield return null;
+        }
+
+        fadeImage.color = targetColor;
+
+        Destroy(fadeImage.gameObject, 1.5f);
+    }
 }

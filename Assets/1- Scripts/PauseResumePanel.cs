@@ -1,4 +1,6 @@
 using hardartcore.CasualGUI;
+using UnityEngine.SceneManagement;
+
 using UnityEngine;
 
 public class PauseResumePanel : MonoBehaviour
@@ -26,8 +28,7 @@ public class PauseResumePanel : MonoBehaviour
 
     public void GoToMainMenu()
     {
-        
-      // go to main menu 
+        SceneManager.LoadScene(0);
 
     }
 
