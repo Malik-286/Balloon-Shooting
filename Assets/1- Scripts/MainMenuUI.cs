@@ -15,13 +15,18 @@ public class MainMenuUI : MonoBehaviour
     {
         settingsPanel.SetActive(false);
         UpdateGameVersionText();
+
+        Time.timeScale = 1;
     }
 
     public void StartGame()
     {
+        Invoke(nameof(SceneChange), 4f);    }
+
+    public void SceneChange()
+    {
         SceneManager.LoadScene(1);
     }
-
 
     public void MuteAndUnMuteAudio()
     {

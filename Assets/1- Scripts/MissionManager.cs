@@ -69,6 +69,14 @@ public class MissionManager : MonoBehaviour
             ArrowsCounter.text = RemainingArrows.ToString(); 
         if(RemainingArrows == 0)
         {
+            Invoke(nameof(CheckFails), 3f);
+        }
+    }
+
+    public void CheckFails()
+    {
+        if (RemainingArrows == 0)
+        {
             Fail = true;
             Success = false;
         }
@@ -92,8 +100,7 @@ public class MissionManager : MonoBehaviour
                 if (SmashedBallons != BalloonsCountPerLevel[PlayerPrefs.GetInt("CurrentLevel")])
                     {
                     if (GamePlayUI.Instance)
-                    {
-                      
+                    {                   
                         GamePlayUI.Instance.ActivateLosePanel();
                     }
                     else
