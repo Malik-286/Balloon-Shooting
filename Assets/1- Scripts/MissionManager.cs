@@ -16,6 +16,7 @@ public class MissionManager : MonoBehaviour
     public int[] ArrowsCountPerLevel;
     public int RemainingArrows;
     public TextMeshProUGUI ArrowsCounter;
+    public TextMeshProUGUI TotalArrowsText;
     [SerializeField] int TotalArrows;
 
 
@@ -23,9 +24,11 @@ public class MissionManager : MonoBehaviour
     public int[] BalloonsCountPerLevel;
     public int SmashedBallons;
     public TextMeshProUGUI BalloonsCounter;
+    public TextMeshProUGUI TotalBalloonsText;
 
     [Header("Others")]
     public TextMeshProUGUI LevelCounter;
+    public TextMeshProUGUI FailReason;
 
     [Header("Particles and Positions")]
 
@@ -42,6 +45,8 @@ public class MissionManager : MonoBehaviour
         }
 
         //Gameplay Essentials
+        TotalArrowsText.text = ArrowsCountPerLevel[PlayerPrefs.GetInt("CurrentLevel")].ToString();
+        TotalBalloonsText.text = BalloonsCountPerLevel[PlayerPrefs.GetInt("CurrentLevel")].ToString();
         LevelCounter.text = (PlayerPrefs.GetInt("CurrentLevel")+1).ToString();
         TotalArrows = ArrowsCountPerLevel[PlayerPrefs.GetInt("CurrentLevel")];
     }
@@ -79,6 +84,8 @@ public class MissionManager : MonoBehaviour
         {
             Fail = true;
             Success = false;
+
+            FailReason.text = (BalloonsCountPerLevel[PlayerPrefs.GetInt("CurrentLevel")] - SmashedBallons + " BALLOONS LEFT.").ToString();
         }
     }
     void Update()
