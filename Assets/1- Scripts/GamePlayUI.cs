@@ -76,15 +76,27 @@ public class GamePlayUI : MonoBehaviour
 
     public void HomebuttonButton()
     {
+        if (Adsmanager.Instance)
+        {
+            Adsmanager.Instance.ShowIntersitial();
+        }
         SceneManager.LoadScene("Main Menu");
     }
 
     public void RestartButton()
     {
+        if (Adsmanager.Instance)
+        {
+            Adsmanager.Instance.ShowIntersitial();
+        }
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
     public void NextButton()
     {
+        if (Adsmanager.Instance)
+        {
+            Adsmanager.Instance.ShowIntersitial();
+        }
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 
