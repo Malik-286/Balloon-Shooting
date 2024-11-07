@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using Unity.VisualScripting;
 
 
 public class MissionManager : MonoBehaviour
@@ -17,7 +18,7 @@ public class MissionManager : MonoBehaviour
     public int RemainingArrows;
     public TextMeshProUGUI ArrowsCounter;
     public TextMeshProUGUI TotalArrowsText;
-    [SerializeField] int TotalArrows;
+    public int TotalArrows;
 
 
     [Header("Balloons")]
@@ -29,6 +30,8 @@ public class MissionManager : MonoBehaviour
     [Header("Others")]
     public TextMeshProUGUI LevelCounter;
     public TextMeshProUGUI FailReason;
+    public GameObject RewardPanel;
+    public TextMeshProUGUI RewardAdditionText;
 
     [Header("Particles and Positions")]
 
@@ -69,6 +72,18 @@ public class MissionManager : MonoBehaviour
             PlayerPrefs.SetInt("CurrentLevel", PlayerPrefs.GetInt("CurrentLevel") + 1);
         }
     }
+
+    public void UpdateTotalArrows()
+    {
+        TotalArrowsText.text = TotalArrows.ToString();
+        Invoke(nameof(RemoveAnimation), 1f);
+    }
+
+    public void RemoveAnimation()
+    {
+        RewardAdditionText.gameObject.SetActive(false);
+    }
+
     public void UpdateArrowsCounter()
     {
             ArrowsCounter.text = RemainingArrows.ToString(); 
