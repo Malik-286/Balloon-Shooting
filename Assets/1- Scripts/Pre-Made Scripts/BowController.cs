@@ -32,6 +32,7 @@ public class BowController : MonoBehaviour
 
     public static BowController instance;
 
+ 
     void Awake()
     {
         if (instance == null)
@@ -68,7 +69,8 @@ public class BowController : MonoBehaviour
         }
 
         CreateArrow(); // Create an arrow for the bow
-    }
+
+     }
 
     void Update()
     {
@@ -264,5 +266,7 @@ public class BowController : MonoBehaviour
 
         currentArrow = null;
     }
+
+   
 }
 

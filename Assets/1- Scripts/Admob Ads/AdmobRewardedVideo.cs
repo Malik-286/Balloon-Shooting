@@ -36,7 +36,8 @@ public class AdmobRewardedVideo : MonoBehaviour
                 BowController.instance.GetComponent<RectTransform>().rotation = Quaternion.identity;
                 print("Name of bowcontroller "+ BowController.instance.transform.name);
                 print("rotation of bowcontroller " + BowController.instance.GetComponent<RectTransform>().rotation);
-            }
+
+             }
         }     
     }
     #endregion
