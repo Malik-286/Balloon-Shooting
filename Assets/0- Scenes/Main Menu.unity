@@ -456,7 +456,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6859486373488598451, guid: 9229289da692451418930fbe71e0d0ed, type: 3}
       propertyPath: m_Name
-      value: AdsManager
+      value: Ads Manager
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
