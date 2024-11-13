@@ -196,13 +196,6 @@ public class DataManager : MonoBehaviour
 				get { return numberOfArrows;}
 				set {
 						numberOfArrows = value;
-			if (MissionManager.Instance)
-			{
-				MissionManager.Instance.RemainingArrows = numberOfArrows;
-				MissionManager.Instance.UpdateArrowsCounter();
-
-
-            }
             //Apply number of arrows on arrow's UI text
             ApplyNumberOfArrowsOnUI	 ();
 				}

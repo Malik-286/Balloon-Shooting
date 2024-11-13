@@ -184,10 +184,13 @@ public class BowController : MonoBehaviour
 
     public void CreateArrow()
     {
-        if (DataManager.NumberOfArrows <= 0)
+        if (MissionManager.Instance)
         {
-           // Debug.LogError("No arrows available to create!");
-            return;
+            if (MissionManager.Instance.RemainingArrows <= 0)
+            {
+                //   Debug.LogError("No arrows left!");
+                return;
+            }
         }
 
         currentArrow = Instantiate(bowArrowPrefab, Vector3.zero, bowArrowPrefab.transform.rotation);
@@ -232,19 +235,19 @@ public class BowController : MonoBehaviour
             return;
         }
 
-        if (DataManager.NumberOfArrows <= 0)
-        {
-         //   Debug.LogError("No arrows left!");
-            return;
-        }
-
         if (arrowForce.magnitude < requiredLaunchForce)
         {
             Debug.Log("Launch force is insufficient!");
             return;
         }
 
-        DataManager.NumberOfArrows--;
+            //DataManager.NumberOfArrows--;
+        if (MissionManager.Instance)
+        {
+            print("minus arrow");
+            MissionManager.Instance.RemainingArrows--;
+            MissionManager.Instance.UpdateArrowsCounter();
+        }
 
         if (BowRope.instance != null)
         {

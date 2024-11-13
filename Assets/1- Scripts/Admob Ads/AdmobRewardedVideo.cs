@@ -25,10 +25,12 @@ public class AdmobRewardedVideo : MonoBehaviour
     {
         if (Index == 0)
         {
-            DataManager.NumberOfArrows += 5;
+            //DataManager.NumberOfArrows = DataManager.NumberOfArrows + 5;
             if (MissionManager.Instance)
             {
-                MissionManager.Instance.TotalArrows = DataManager.NumberOfArrows;
+                MissionManager.Instance.RemainingArrows += 5; 
+                MissionManager.Instance.TotalArrows += 5;
+                MissionManager.Instance.UpdateArrowsCounter();
                 MissionManager.Instance.RewardPanel.SetActive(true);
             }
             if (BowController.instance)
