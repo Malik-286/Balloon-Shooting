@@ -388,7 +388,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 3b0d335d42cf10349bd7caede76f6d51, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 26d299810b078a042889a2c2f0be7d8f, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -456,7 +456,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6859486373488598451, guid: 9229289da692451418930fbe71e0d0ed, type: 3}
       propertyPath: m_Name
-      value: AdsManager
+      value: Ads Manager
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
