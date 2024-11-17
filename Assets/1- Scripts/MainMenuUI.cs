@@ -47,7 +47,7 @@ public class MainMenuUI : MonoBehaviour
 
     void UpdateGameVersionText()
     {
-        versionText.text = "version : "+Application.version;
+        versionText.text = Application.version;
     }
    
 }
