@@ -32,6 +32,14 @@ public class PauseResumePanel : MonoBehaviour
 
     }
 
+    public void RestartGame()
+    {
+        int currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
+
+        SceneManager.LoadScene(currentSceneIndex);
+
+    }
+
 
 
 
