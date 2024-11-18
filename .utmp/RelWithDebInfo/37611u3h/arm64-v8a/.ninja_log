@@ -1,5 +1,5 @@
 # ninja log v5
-2	137	7528663515920141	FramePacing/CMakeFiles/swappywrapper.dir/UnitySwappyWrapper.cpp.o	b457d762d8977bb9
-137	376	7528663518300694	E:/Balloon-Shooting/Library/Bee/Android/Prj/IL2CPP/Gradle/unityLibrary/build/intermediates/cxx/RelWithDebInfo/37611u3h/obj/arm64-v8a/libswappywrapper.so	9addc13d8f3c96be
 1	157	7528672606735035	FramePacing/CMakeFiles/swappywrapper.dir/UnitySwappyWrapper.cpp.o	b457d762d8977bb9
 157	330	7528672608488646	E:/Balloon-Shooting/Library/Bee/Android/Prj/IL2CPP/Gradle/unityLibrary/build/intermediates/cxx/RelWithDebInfo/37611u3h/obj/arm64-v8a/libswappywrapper.so	9addc13d8f3c96be
+2	479	7536029451141970	FramePacing/CMakeFiles/swappywrapper.dir/UnitySwappyWrapper.cpp.o	b457d762d8977bb9
+479	808	7536029454415113	E:/Balloon-Shooting/Library/Bee/Android/Prj/IL2CPP/Gradle/unityLibrary/build/intermediates/cxx/RelWithDebInfo/37611u3h/obj/arm64-v8a/libswappywrapper.so	9addc13d8f3c96be
