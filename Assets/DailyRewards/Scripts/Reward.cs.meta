@@ -1,0 +1,19 @@
+fileFormatVersion: 2
+guid: 036df2896253256438287d102023110a
+timeCreated: 1483543051
+licenseType: Store
+MonoImporter:
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 110798
+  packageName: Daily Rewards - Free
+  packageVersion: 1.3.1
+  assetPath: Assets/DailyRewards/Scripts/Reward.cs
+  uploadId: 286928
