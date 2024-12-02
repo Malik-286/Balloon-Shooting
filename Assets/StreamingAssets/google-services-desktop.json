@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "169635218634",
+    "project_id": "balloon-shooter-3b93e",
+    "storage_bucket": "balloon-shooter-3b93e.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:169635218634:android:a9941745392a29399fa033",
+        "android_client_info": {
+          "package_name": "com.aspiregamesstudio.ArrowStrikeBalloonShooter"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD_portMRrFOXrdrz8_iXEBc0KOAquTEdQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
