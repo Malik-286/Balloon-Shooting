@@ -1,6 +1,0 @@
--dontobfuscate
-#GameServices
--keep class com.google.android.gms.** { *; }
--keep class com.google.games.bridge.** { *; }
-#AdMob
--keep class com.google.unity.** { *; }
