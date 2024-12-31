@@ -7,9 +7,11 @@ public class Store : MonoBehaviour
 {
     
     [SerializeField] GameObject restoreButton;
- 
+    [SerializeField] GameObject removeAdsButton;
 
-    const string removeAds_ProductID = "com.aspiregamesstudio.arrowstrikeballoonshooter.removeads";
+
+
+    const string removeAds_ProductID = "com.agsventures.balloonblasterquest.removeads";
 
 
     [Header("Ads Status")]
@@ -27,7 +29,11 @@ public class Store : MonoBehaviour
         {
             this.adsStatus = "enabled";
         }
-         
+        if (this.adsStatus == "disabled")
+        {
+            removeAdsButton.SetActive(false);
+        }
+
     }
 
     void CheckRestoreButton()
