@@ -11,17 +11,21 @@ public class MainMenuUI : MonoBehaviour
 
     [SerializeField] GameObject settingsPanel;
     [SerializeField] TextMeshProUGUI versionText;
+    [SerializeField] TextMeshProUGUI levelText;
+
 
     void Start()
     {
         settingsPanel.SetActive(false);
         UpdateGameVersionText();
+        UpdateLevelText();
 
         Time.timeScale = 1;
     }
     void OnEnable()
     {
         DailyRewards.instance.onClaimPrize += OnClaimPrizeDailyRewards;
+
     }
 
     void OnDisable()
@@ -47,7 +51,13 @@ public class MainMenuUI : MonoBehaviour
     }
     public void StartGame()
     {
-        Invoke(nameof(SceneChange), 4f);    }
+        Invoke(nameof(SceneChange), 1.5f);    
+    
+    
+    
+    
+    
+    }
 
     public void SceneChange()
     {
@@ -75,5 +85,13 @@ public class MainMenuUI : MonoBehaviour
     {
         versionText.text = Application.version;
     }
-   
+
+    void UpdateLevelText()
+    {
+      
+        levelText.text = "Level " + PlayerPrefs.GetInt("CurrentLevel").ToString();   
+    }
+
+
+
 }

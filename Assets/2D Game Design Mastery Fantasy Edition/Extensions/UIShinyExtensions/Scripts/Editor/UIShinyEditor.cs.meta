@@ -1,0 +1,19 @@
+fileFormatVersion: 2
+guid: 0080e984bad7545cd957d9121e99f988
+timeCreated: 1538806052
+licenseType: Store
+MonoImporter:
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 87689
+  packageName: GUI Fantasy - 2D UI Fantasy Pack
+  packageVersion: 2.0
+  assetPath: Assets/2D Game Design Mastery Fantasy Edition/Extensions/UIShinyExtensions/Scripts/Editor/UIShinyEditor.cs
+  uploadId: 590301

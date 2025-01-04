@@ -5,7 +5,7 @@ public class ShopManager : MonoBehaviour
 
     public GameObject[] ShopItemButtons;//Start from 1st bow as zero
     public int[] Prices;
-    [SerializeField]int TotalShopItems = 10;
+    [SerializeField] int TotalShopItems = 10;
 
     private void Awake()
     {

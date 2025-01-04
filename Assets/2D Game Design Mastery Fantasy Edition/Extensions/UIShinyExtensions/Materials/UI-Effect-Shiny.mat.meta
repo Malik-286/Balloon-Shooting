@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 9dc7e810a87b444ab96919f3215c2fe5
+timeCreated: 1523859834
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 87689
+  packageName: GUI Fantasy - 2D UI Fantasy Pack
+  packageVersion: 2.0
+  assetPath: Assets/2D Game Design Mastery Fantasy Edition/Extensions/UIShinyExtensions/Materials/UI-Effect-Shiny.mat
+  uploadId: 590301
